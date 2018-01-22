@@ -47,6 +47,6 @@ class DistanceFinder
   end
 
   def is_number?(string)
-    true if string.to_f rescue false
+    true if Float(string) rescue false
   end
 end

@@ -9,9 +9,12 @@ class FileReader
   end
 
   def parse
-    puts "No input file supplied" unless File.exists?(@file)
-
     contents = IO.readlines(@file)
+
+    if @file.nil? || !File.exists?(@file) || contents.empty?
+      puts "Please provide correct file"
+      exit
+    end
 
     [].tap do |customers|
       contents.each do |line|
