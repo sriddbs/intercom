@@ -7,4 +7,8 @@ class Customer
     @lat = customer_attrs["latitude"]
     @lng = customer_attrs["longitude"]
   end
+
+  def to_s
+    [user_id, name].join(" ")
+  end
 end

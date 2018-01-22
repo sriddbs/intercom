@@ -8,4 +8,4 @@ service = InviteService.new
 puts "*" * 100
 puts "Customers to invite"
 puts "*" * 100
-puts service.invitable_customers(customers).inspect
+puts service.invitable_customers(customers).map(&:to_s)
